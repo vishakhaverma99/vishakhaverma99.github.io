@@ -1,71 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vishakha Verma | Web Developer Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    
-   
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
+    <!-- ================= HERO SECTION ================= -->
     <header class="hero">
-        <div class="container">
-            <div style="margin-bottom: 20px;">
-                <img src="https://ui-avatars.com/api/?name=Vishakha+Verma&background=6A0DAD&color=fff&size=150" 
-                     alt="Vishakha" 
-                     style="width: 120px; height: 120px; border-radius: 50%; border: 4px solid rgba(255,255,255,0.3); box-shadow: 0 0 30px rgba(106, 13, 173, 0.6);">
-            </div>
-            <h1>Vishakha Verma</h1>
-            <h2>Web Developer & Designer</h2>
-            <p style="max-width: 600px; margin: 0 auto 30px; opacity: 0.8;">
-                Bridging the gap between complex functionality and beautiful design.
-                Specializing in CPaaS architectures and Fintech solutions.
+        <div class="container hero-inner">
+
+            <img 
+                src="https://ui-avatars.com/api/?name=Vishakha+Verma&background=6A0DAD&color=fff&size=180" 
+                alt="Vishakha Verma" 
+                class="profile-img"
+            />
+
+            <h1 class="hero-title">Vishakha Verma</h1>
+            <h2 class="hero-subtitle">Web Developer & UI Designer</h2>
+
+            <p class="hero-text">
+                I build fast, responsive, visually polished websites — specializing in CPaaS architectures, Fintech dashboards, and modern UI development.
             </p>
-            <a href="#projects" class="hero-btn">View Featured Work</a>
+
+            <a href="#projects" class="hero-btn">Explore My Work</a>
         </div>
     </header>
 
+    <!-- ================= EXPERIENCE SECTION ================= -->
     <section id="experience">
         <div class="container">
             <h2 class="section-title">Professional Journey</h2>
+
             <div class="timeline-container">
-                
+
+                <!-- ORBITEL -->
                 <div class="timeline-card">
                     <div class="timeline-dot"></div>
-                    <h3 style="margin: 0 0 5px 0;">Orbitel.in</h3>
-                    <div style="font-size: 0.85rem; color: var(--secondary); font-weight:700; margin-bottom:10px;">
-                        PRESENT · WEB DEVELOPER
-                    </div>
-                    <p style="margin: 0; font-size: 0.9rem; color: #475569;">
-                        Leading the frontend development for a major CPaaS provider. Optimized landing pages for high-volume API traffic and branding consistency.
+                    <h3>Orbitel</h3>
+                    <p class="role">WEB DEVELOPER & DESIGNER · PRESENT</p>
+                    <p>
+                        Frontend development for a CPaaS provider. Built landing pages, API documentation UI, SMS/Voice product pages, and brand-level consistency.
                     </p>
                 </div>
 
-                <div class="timeline-card" style="border-left-color: var(--primary);">
-                    <div class="timeline-dot" style="background: var(--primary);"></div>
-                    <h3 style="margin: 0 0 5px 0;">Biocipher.in</h3>
-                    <div style="font-size: 0.85rem; color: var(--primary); font-weight:700; margin-bottom:10px;">
-                        WEB DESIGNER
-                    </div>
-                    <p style="margin: 0; font-size: 0.9rem; color: #475569;">
-                        Designed UI layouts and created engaging web graphics for biotechnology services.
+                <!-- BIOCIPHER -->
+                <div class="timeline-card primary">
+                    <div class="timeline-dot primary-dot"></div>
+                    <h3>Biocipher</h3>
+                    <p class="role primary-role">WEB DEVELOPER & DESIGNER </p>
+                    <p>
+                        Delivered UI layouts and engaging biotech service pages with custom graphics and responsive design.
                     </p>
                 </div>
 
-                <div class="timeline-card" style="border-left-color: #64748b;">
-                    <div class="timeline-dot" style="background: #64748b; border-color: #e2e8f0; box-shadow: none;"></div>
-                    <h3 style="margin: 0 0 5px 0;">Pansofic</h3>
-                    <div style="font-size: 0.85rem; color: #64748b; font-weight:700; margin-bottom:10px;">
-                        EARLY CAREER · WEB DEVELOPER
-                    </div>
-                    <p style="margin: 0; font-size: 0.9rem; color: #475569;">
-                        Mastered HTML/CSS foundations, responsive page development, and basic PHP/MySQL integrations.
+                <!-- PANSOFIC -->
+                <div class="timeline-card gray">
+                    <div class="timeline-dot gray-dot"></div>
+                    <h3>Pansofic</h3>
+                    <p class="role gray-role">WEB DEVELOPER · EARLY CAREER</p>
+                    <p>
+                        Gained strong foundations in HTML, CSS, responsive layout building, and PHP/MySQL basics.
                     </p>
                 </div>
 
@@ -73,88 +80,205 @@
         </div>
     </section>
 
-    <section id="projects" style="background: white;">
-        <div class="container">
-            <h2 class="section-title">Selected Projects</h2>
-            <p class="section-subtitle">A collection of CPaaS platforms and Fintech solutions built for performance and scale.</p>
+    <!-- ================= SKILLS SECTION ================= -->
+<section id="skills">
+    <div class="container">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <p class="section-subtitle">
+            A blend of technical development skills, UI/UX expertise, and creative brand-building capabilities.
+        </p>
 
-            <div class="category-header"><i class="fas fa-network-wired"></i> CPaaS & Technology</div>
+        <div class="skills-grid">
+
+            <!-- Skill Card -->
+            <div class="skill-card">
+                <i class="fas fa-code skill-icon"></i>
+                <h3>Frontend Development</h3>
+                <p>HTML · CSS · JavaScript · Bootstrap · Responsive UI</p>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 95%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-paint-brush skill-icon"></i>
+                <h3>UI/UX Design</h3>
+                <p>Wireframes · Prototypes · Visual Design · Web Layouts</p>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-photo-video skill-icon"></i>
+                <h3>Logo & Branding</h3>
+                <p>Logo Design · Brand Identity · Color Systems · Typography</p>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 92%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-server skill-icon"></i>
+                <h3>Backend Basics</h3>
+                <p>PHP · MySQL · Firebase · API Integration</p>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 70%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-bolt skill-icon"></i>
+                <h3>Performance Optimization</h3>
+                <p>SEO · Speed Optimization · Clean Code · Web Vitals</p>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-layer-group skill-icon"></i>
+                <h3>Tools & Platforms</h3>
+                <p>Figma · Canva · WordPress · GitHub · Firebase</p>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 88%;"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ================= PROJECTS SECTION ================= -->
+    <section id="projects">
+        <div class="container">
+
+            <h2 class="section-title">Selected Projects</h2>
+            <p class="section-subtitle">
+                A collection of CPaaS platforms, fintech dashboards, and modern business websites I’ve designed and developed.
+            </p>
+
+            <!-- ===== CPaaS Projects ===== -->
+            <div class="category-header">
+                <i class="fas fa-network-wired"></i> CPaaS & Technology
+            </div>
+
             <div class="projects-grid">
-                
+
+                <!-- ORBITEL -->
                 <div class="project-card cpaas">
                     <div class="card-thumb">
-                        <img src="https://picsum.photos/seed/code/600/400" alt="Orbitel Website UI">
+                        <img src="asset/orbitel.png" alt="Orbitel Project Preview" />
                     </div>
                     <div class="card-body">
                         <span class="card-tag tag-cpaas">CPaaS Provider</span>
-                        <h3 class="card-title">Orbitel</h3>
-                        <p class="card-desc">A comprehensive Communication Platform as a Service (CPaaS) website offering API solutions for voice and messaging.</p>
-                        <a href="https://orbitel.in" target="_blank" class="btn-visit">Visit Site <i class="fas fa-arrow-right"></i></a>
+                        <h3>Orbitel</h3>
+                        <p>
+                            Communication Platform offering APIs for SMS, RCS, WhatsApp, Email, and IVR built with modern UI.
+                        </p>
+                        <a href="https://orbitel.in" target="_blank" class="btn-visit">
+                            Visit Site <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
+                <!-- PIXABITS -->
                 <div class="project-card cpaas">
                     <div class="card-thumb">
-                        <img src="https://picsum.photos/seed/circuit/600/400" alt="Pixabits Platform">
+                        <img src="asset/pixabits.png" alt="Pixabits UI" />
                     </div>
                     <div class="card-body">
                         <span class="card-tag tag-cpaas">CPaaS & Digital</span>
-                        <h3 class="card-title">Pixabits</h3>
-                        <p class="card-desc">A modern digital solutions platform focusing on communication technologies and software integration.</p>
-                        <a href="https://www.pixabits.in" target="_blank" class="btn-visit">Visit Site <i class="fas fa-arrow-right"></i></a>
+                        <h3>Pixabits</h3>
+                        <p>
+                            A powerful digital and communication solutions platform featuring integration-first UI flows.
+                        </p>
+                        <a href="https://pixabits.in" target="_blank" class="btn-visit">
+                            Visit Site <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
             </div>
 
-            <div class="category-header"><i class="fas fa-chart-line"></i> Fintech & Financial Services</div>
+            <!-- ===== FINTECH PROJECTS ===== -->
+            <div class="category-header">
+                <i class="fas fa-chart-line"></i> Fintech & Financial Services
+            </div>
+
             <div class="projects-grid">
 
+                <!-- DOLLAR24 -->
                 <div class="project-card fintech">
                     <div class="card-thumb">
-                        <img src="https://picsum.photos/seed/charts/600/400" alt="Dollar24">
+                        <img src="asset/dollar.png" alt="Dollar24 Dashboard" />
                     </div>
                     <div class="card-body">
                         <span class="card-tag tag-fintech">Fintech</span>
-                        <h3 class="card-title">Dollar24</h3>
-                        <p class="card-desc">A secure financial services platform designed to provide quick loans and investment tracking for users.</p>
-                        <a href="https://dollar24.co.in" target="_blank" class="btn-visit">Visit Site <i class="fas fa-arrow-right"></i></a>
+                        <h3>Dollar24</h3>
+                        <p>
+                            A loan & investment platform with a clean dashboard UI, fast navigation, and payment workflows.
+                        </p>
+                        <a href="https://dollar24.co.in" target="_blank" class="btn-visit">
+                            Visit Site <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
+                <!-- V4U -->
                 <div class="project-card fintech">
                     <div class="card-thumb">
-                        <img src="https://picsum.photos/seed/stockmarket/600/400" alt="V4U">
+                        <img src="asset/v4u.png" alt="V4U UI" />
                     </div>
                     <div class="card-body">
-                        <span class="card-tag tag-fintech">Fintech Consultancy</span>
-                        <h3 class="card-title">V4U Services</h3>
-                        <p class="card-desc">Corporate financial consultancy website featuring service breakdowns and lead generation forms.</p>
-                        <a href="https://v4uservices.com/" target="_blank" class="btn-visit">Visit Site <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-tag tag-fintech">Finance Consultancy</span>
+                        <h3>V4U Services</h3>
+                        <p>
+                            A full service consultancy website with structured service breakdowns and lead generation UI.
+                        </p>
+                        <a href="https://v4uservices.com" target="_blank" class="btn-visit">
+                            Visit Site <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
+                <!-- SPACE HEIGHT -->
                 <div class="project-card fintech">
                     <div class="card-thumb">
-                        <img src="https://picsum.photos/seed/data/600/400" alt="Space Height">
+                        <img src="asset/spaceheight.png" alt="Space Height" />
                     </div>
                     <div class="card-body">
-                        <span class="card-tag tag-fintech">Fintech / Real Estate</span>
-                        <h3 class="card-title">Space Height</h3>
-                        <p class="card-desc">Investment and property management platform focusing on the financial aspects of real estate.</p>
-                        <a href="https://www.spaceheight.co.in/" target="_blank" class="btn-visit">Visit Site <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-tag tag-fintech"> Fintech</span>
+                        <h3>Space Height</h3>
+                        <p>
+                            Finance-centric real estate platform with analytics-driven UI & investment insights.
+                        </p>
+                        <a href="https://spaceheight.co.in" target="_blank" class="btn-visit">
+                            Visit Site <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
-                 <div class="project-card fintech">
+                <!-- SHRESHREY -->
+                <div class="project-card fintech">
                     <div class="card-thumb">
-                        <img src="https://picsum.photos/seed/transactions/600/400" alt="Shreshrey">
+                        <img src="asset/ssc.png" alt="Shreshrey Cards" />
                     </div>
                     <div class="card-body">
-                        <span class="card-tag tag-fintech">Fintech & E-Commerce</span>
-                        <h3 class="card-title">Shreshrey Cards</h3>
-                        <p class="card-desc">Digital payment-integrated platform tailored for high-volume transactions and product showcases.</p>
-                        <a href="https://www.shreshreycards.com/" target="_blank" class="btn-visit">Visit Site <i class="fas fa-arrow-right"></i></a>
+                        <span class="card-tag tag-fintech">Fintech</span>
+                        <h3>Shreshrey Cards</h3>
+                        <p>
+                            A payment-integrated e-commerce website with product listings and checkout flows.
+                        </p>
+                        <a href="https://shreshreycards.com" target="_blank" class="btn-visit">
+                            Visit Site <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -162,14 +286,17 @@
         </div>
     </section>
 
+    <!-- ================= FOOTER ================= -->
     <footer class="contact-section">
         <div class="container">
             <h2>Let’s Work on Something Awesome!</h2>
-            <p style="margin-bottom: 30px; opacity: 0.8;">Available for freelance projects and collaborations.</p>
-            <div style="font-size: 1.2rem; margin-bottom: 20px;">
-                <i class="fas fa-envelope"></i> your-email@example.com
-            </div>
-            <p style="font-size: 0.9rem; opacity: 0.5;">© 2025 Vishakha Verma. All Rights Reserved.</p>
+            <p class="footer-subtext">Available for freelance, full-time roles & collaborations.</p>
+
+            <div class="email"><i class="fas fa-envelope"></i> vishiverma1111@gmail.com</div>
+
+            <p class="copyright">
+                © 2025 Vishakha Verma. All Rights Reserved.
+            </p>
         </div>
     </footer>
 
