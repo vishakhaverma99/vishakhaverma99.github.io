@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishakha Verma | Web Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- CSS VARIABLES & THEME --- */
+        :root {
+            --primary: #6A0DAD;      /* Royal Purple */
+            --secondary: #3F8CFF;    /* Electric Blue */
+            --cpaas: #00e5ff;        /* Cyan for Tech/CPaaS */
+            --fintech: #2ecc71;      /* Green for Fintech */
+            --dark: #0f172a;         
+            --text: #334155;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #6A0DAD 0%, #3F8CFF 100%);
+            --card-shadow: 0 10px 40px -10px rgba(0,0,0,0.1);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            background-color: #f8fafc;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--dark); }
+        a { text-decoration: none; transition: 0.3s; }
+        ul { list-style: none; padding: 0; }
+
+        /* --- LAYOUT UTILITIES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 60px;
+            color: #64748b;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 100vh;
+            background: var(--dark);
+            background-image: radial-gradient(circle at 10% 20%, rgba(63, 140, 255, 0.2) 0%, transparent 20%),
+                              radial-gradient(circle at 90% 80%, rgba(106, 13, 173, 0.2) 0%, transparent 20%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            background: linear-gradient(to right, #fff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            color: white; 
+        }
+
+        .hero h2 {
+            color: #94a3b8;
+            font-weight: 400;
+            font-size: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .hero-btn {
+            background: var(--gradient);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 0 20px rgba(63, 140, 255, 0.5);
+            display: inline-block;
+        }
+        .hero-btn:hover { transform: translateY(-3px); box-shadow: 0 0 30px rgba(63, 140, 255, 0.8); }
+
+        /* --- EXPERIENCE TIMELINE --- */
+        .timeline-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #e2e8f0;
+        }
+
+        .timeline-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin-left: 60px;
+            margin-bottom: 40px;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            border-left: 5px solid var(--secondary);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -51px;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            background: var(--secondary);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px #bfdbfe;
+        }
+
+        /* --- PROJECT GRID --- */
+        .category-header {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 40px 0 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            border-top: 4px solid transparent;
+        }
+
+        /* Type Colors */
+        .project-card.cpaas { border-top-color: var(--cpaas); }
+        .project-card.fintech { border-top-color: var(--fintech); }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px -10px rgba(106, 13, 173, 0.2);
+        }
+
+        .card-thumb {
+            height: 200px;
+            background-color: #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        
+        .project-card:hover .card-thumb img { transform: scale(1.1); }
+
+        .card-body { padding: 25px; }
+
+        .card-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+        
+        .tag-cpaas { background: #e0faff; color: #00acc1; }
+        .tag-fintech { background: #e8f5e9; color: #2e7d32; }
+
+        .card-title { font-size: 1.25rem; margin: 0 0 10px 0; color: var(--dark); }
+        .card-desc { font-size: 0.9rem; color: #64748b; margin-bottom: 20px; }
+
+        .btn-visit {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #f1f5f9;
+            color: var(--dark);
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .btn-visit:hover { background: var(--dark); color: white; }
+
+        /* --- CONTACT --- */
+        .contact-section {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .timeline-container::before { left: 10px; }
+            .timeline-card { margin-left: 35px; padding: 20px; }
+            .timeline-dot { left: -34px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <div style="margin-bottom: 20px;">
+                <img src="https://ui-avatars.com/api/?name=Vishakha+Verma&background=6A0DAD&color=fff&size=150" 
+                     alt="Vishakha" 
+                     style="width: 120px; height: 120px; border-radius: 50%; border: 4px solid rgba(255,255,255,0.3); box-shadow: 0 0 30px rgba(106, 13, 173, 0.6);">
+            </div>
+            <h1>Vishakha Verma</h1>
+            <h2>Web Developer & Designer</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px; opacity: 0.8;">
+                Bridging the gap between complex functionality and beautiful design.
+                Specializing in CPaaS architectures and Fintech solutions.
+            </p>
+            <a href="#projects" class="hero-btn">View Featured Work</a>
+        </div>
+    </header>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Journey</h2>
+            <div class="timeline-container">
+                
+                <div class="timeline-card">
+                    <div class="timeline-dot"></div>
+                    <h3 style="margin: 0 0 5px 0;">Orbitel.in</h3>
+                    <div style="font-size: 0.85rem; color: var(--secondary); font-weight:700; margin-bottom:10px;">
+                        PRESENT · WEB DEVELOPER
+                    </div>
+                    <p style="margin: 0; font-size: 0.9rem; color: #475569;">
+                        Leading the frontend development for a major CPaaS provider. Optimized landing pages for high-volume API traffic and branding consistency.
+                    </p>
+                </div>
+
+                <div class="timeline-card" style="border-left-color: var(--primary);">
+                    <div class="timeline-dot" style="background: var(--primary);"></div>
+                    <h3 style="margin: 0 0 5px 0;">Biocipher.in</h3>
+                    <div style="font-size: 0.85rem; color: var(--primary); font-weight:700; margin-bottom:10px;">
+                        WEB DESIGNER
+                    </div>
+                    <p style="margin: 0; font-size: 0.9rem; color: #475569;">
+                        Designed UI layouts and created engaging web graphics for biotechnology services.
+                    </p>
+                </div>
+
+                <div class="timeline-card" style="border-left-color: #64748b;">
+                    <div class="timeline-dot" style="background: #64748b; border-color: #e2e8f0; box-shadow: none;"></div>
+                    <h3 style="margin: 0 0 5px 0;">Pansofic</h3>
+                    <div style="font-size: 0.85rem; color: #64748b; font-weight:700; margin-bottom:10px;">
+                        EARLY CAREER · WEB DEVELOPER
+                    </div>
+                    <p style="margin: 0; font-size: 0.9rem; color: #475569;">
+                        Mastered HTML/CSS foundations, responsive page development, and basic PHP/MySQL integrations.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">Selected Projects</h2>
+            <p class="section-subtitle">A collection of CPaaS platforms and Fintech solutions built for performance and scale.</p>
+
+            <div class="category-header"><i class="fas fa-network-wired"></i> CPaaS & Technology</div>
+            <div class="projects-grid">
+                
+                <div class="project-card cpaas">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/code/600/400" alt="Orbitel Website UI">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag tag-cpaas">CPaaS Provider</span>
+                        <h3 class="card-title">Orbitel</h3>
+                        <p class="card-desc">A comprehensive Communication Platform as a Service (CPaaS) website offering API solutions for voice and messaging.</p>
+                        <a href="https://orbitel.in" target="_blank" class="btn-visit">Visit Site <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card cpaas">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/circuit/600/400" alt="Pixabits Platform">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag tag-cpaas">CPaaS & Digital</span>
+                        <h3 class="card-title">Pixabits</h3>
+                        <p class="card-desc">A modern digital solutions platform focusing on communication technologies and software integration.</p>
+                        <a href="https://www.pixabits.in" target="_blank" class="btn-visit">Visit Site <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="category-header"><i class="fas fa-chart-line"></i> Fintech & Financial Services</div>
+            <div class="projects-grid">
+
+                <div class="project-card fintech">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/charts/600/400" alt="Dollar24">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag tag-fintech">Fintech</span>
+                        <h3 class="card-title">Dollar24</h3>
+                        <p class="card-desc">A secure financial services platform designed to provide quick loans and investment tracking for users.</p>
+                        <a href="https://dollar24.co.in" target="_blank" class="btn-visit">Visit Site <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card fintech">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/stockmarket/600/400" alt="V4U">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag tag-fintech">Fintech Consultancy</span>
+                        <h3 class="card-title">V4U Services</h3>
+                        <p class="card-desc">Corporate financial consultancy website featuring service breakdowns and lead generation forms.</p>
+                        <a href="https://v4uservices.com/" target="_blank" class="btn-visit">Visit Site <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card fintech">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/data/600/400" alt="Space Height">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag tag-fintech">Fintech / Real Estate</span>
+                        <h3 class="card-title">Space Height</h3>
+                        <p class="card-desc">Investment and property management platform focusing on the financial aspects of real estate.</p>
+                        <a href="https://www.spaceheight.co.in/" target="_blank" class="btn-visit">Visit Site <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                 <div class="project-card fintech">
+                    <div class="card-thumb">
+                        <img src="https://picsum.photos/seed/transactions/600/400" alt="Shreshrey">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag tag-fintech">Fintech & E-Commerce</span>
+                        <h3 class="card-title">Shreshrey Cards</h3>
+                        <p class="card-desc">Digital payment-integrated platform tailored for high-volume transactions and product showcases.</p>
+                        <a href="https://www.shreshreycards.com/" target="_blank" class="btn-visit">Visit Site <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="contact-section">
+        <div class="container">
+            <h2>Let’s Work on Something Awesome!</h2>
+            <p style="margin-bottom: 30px; opacity: 0.8;">Available for freelance projects and collaborations.</p>
+            <div style="font-size: 1.2rem; margin-bottom: 20px;">
+                <i class="fas fa-envelope"></i> your-email@example.com
+            </div>
+            <p style="font-size: 0.9rem; opacity: 0.5;">© 2025 Vishakha Verma. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
