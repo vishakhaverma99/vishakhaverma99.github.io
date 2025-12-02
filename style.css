@@ -1,0 +1,229 @@
+ /* --- CSS VARIABLES & THEME --- */
+        :root {
+            --primary: #6A0DAD;      /* Royal Purple */
+            --secondary: #3F8CFF;    /* Electric Blue */
+            --cpaas: #00e5ff;        /* Cyan for Tech/CPaaS */
+            --fintech: #2ecc71;      /* Green for Fintech */
+            --dark: #0f172a;         
+            --text: #334155;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #6A0DAD 0%, #3F8CFF 100%);
+            --card-shadow: 0 10px 40px -10px rgba(0,0,0,0.1);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            background-color: #f8fafc;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--dark); }
+        a { text-decoration: none; transition: 0.3s; }
+        ul { list-style: none; padding: 0; }
+
+        /* --- LAYOUT UTILITIES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 60px;
+            color: #64748b;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 100vh;
+            background: var(--dark);
+            background-image: radial-gradient(circle at 10% 20%, rgba(63, 140, 255, 0.2) 0%, transparent 20%),
+                              radial-gradient(circle at 90% 80%, rgba(106, 13, 173, 0.2) 0%, transparent 20%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            background: linear-gradient(to right, #fff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            color: white; 
+        }
+
+        .hero h2 {
+            color: #94a3b8;
+            font-weight: 400;
+            font-size: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .hero-btn {
+            background: var(--gradient);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 0 20px rgba(63, 140, 255, 0.5);
+            display: inline-block;
+        }
+        .hero-btn:hover { transform: translateY(-3px); box-shadow: 0 0 30px rgba(63, 140, 255, 0.8); }
+
+        /* --- EXPERIENCE TIMELINE --- */
+        .timeline-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #e2e8f0;
+        }
+
+        .timeline-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin-left: 60px;
+            margin-bottom: 40px;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            border-left: 5px solid var(--secondary);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -51px;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            background: var(--secondary);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px #bfdbfe;
+        }
+
+        /* --- PROJECT GRID --- */
+        .category-header {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 40px 0 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            border-top: 4px solid transparent;
+        }
+
+        /* Type Colors */
+        .project-card.cpaas { border-top-color: var(--cpaas); }
+        .project-card.fintech { border-top-color: var(--fintech); }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px -10px rgba(106, 13, 173, 0.2);
+        }
+
+        .card-thumb {
+            height: 200px;
+            background-color: #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        
+        .project-card:hover .card-thumb img { transform: scale(1.1); }
+
+        .card-body { padding: 25px; }
+
+        .card-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+        
+        .tag-cpaas { background: #e0faff; color: #00acc1; }
+        .tag-fintech { background: #e8f5e9; color: #2e7d32; }
+
+        .card-title { font-size: 1.25rem; margin: 0 0 10px 0; color: var(--dark); }
+        .card-desc { font-size: 0.9rem; color: #64748b; margin-bottom: 20px; }
+
+        .btn-visit {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #f1f5f9;
+            color: var(--dark);
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .btn-visit:hover { background: var(--dark); color: white; }
+
+        /* --- CONTACT --- */
+        .contact-section {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .timeline-container::before { left: 10px; }
+            .timeline-card { margin-left: 35px; padding: 20px; }
+            .timeline-dot { left: -34px; }
+        }
